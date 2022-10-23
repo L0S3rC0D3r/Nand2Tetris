@@ -1,0 +1,49 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/01/DMux.hdl
+
+/**
+ * Demultiplexor:
+ * {a, b} = {in, 0} if sel == 0
+ *          {0, in} if sel == 1
+ *
+ *      Mux = (sel')(a) + (sel)(b) = in
+ *         if, sel == 0 ; in = (1)(a) + (0)(b)
+ *      DMux1 = a
+ *         if, sel == 1 ; in = (0)(a) + (1)(b)
+ *      DMux2 = b
+ *      in (a, b, sel) =  a(sel') + b(sel)
+ *      in = a(sel') + b(sel)
+ *
+ *  |  in   |  sel  |   a   |   b   |
+ *  |   0   |   0   |   0   |   0   |
+ *  |   0   |   1   |   0   |   0   |
+ *  |   1   |   0   |   1   |   0   |
+ *  |   1   |   1   |   0   |   1   |
+ *   a = (in)(sel)'
+ *   b = (in)(sel)
+ *    a + b = in(sel)' + in(sel)
+ *          out1  out2
+ *  | sel |  a  |  b  |
+ *0 |  0  |  in |  0  |
+ *1 |  0  |  in |  0  |
+ *
+ *
+ *                out2
+ *  | sel |  a  |  b  |
+ *0 |  1  |  0  |  in |
+ *1 |  1  |  0  |  in |
+ */
+
+CHIP DMux {
+    IN in, sel;
+    OUT a, b;
+
+    PARTS:
+    // Put your code here:
+    Not(in=sel, out=Notsel);
+    And(a=in, b=Notsel, out=inAndNotsel);
+    And(a=in, b=sel, out=inAndsel);
+    Or(a=inAndNotsel, b=inAndsel, out=out);
+}
