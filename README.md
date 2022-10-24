@@ -25,7 +25,7 @@
    (sel')(a) + (sel)(b)
 */
 ```
-This same principle can be done in therms of zero values, but, they must be sum up and all functions must be appended with an and operation instead of appending each variable with and, we must do or operations, its not a tested method for now, however.
+This same principle can be done in therms of zero values, but, they must be sum up with or operations and all functions must be appended with an and operation instead of appending each variable with and or operation. This method is not tested for now, however.
 
 Module 2: Boolean Arithmetic and the ALU Roadmap
 
