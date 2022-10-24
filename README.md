@@ -9,7 +9,7 @@
  
  * Multiplexor:
  * out = a if sel == 0
- *       b otherwise
+ /nl 1*       b otherwise
  *| sel |  a  |  b  | out |
  *|  0  |  0  |  0  |	 0  |
  *|  0  |  0  |  1  |	 0  |
