@@ -7,9 +7,9 @@
  
  IMPORTANT NOTES from Module 1: In order to represent a Truth table to a binary function. We could use, values in which our function is equal to 1, by appendixing expresions between each other with an and for every value 1 on our truth table output (out). In the case that the value of the expression in the variables (a, b or sel) table is zero, then the expresions are negated, this expressions then must be appended each other with an and operation for every variable, and for every value in out, should be joined  with an or operation. Just as shown in here:
  
- *       Multiplexor:
- *       out = a if sel == 0 
- *       b otherwise
+ *Multiplexor:
+    out = a if sel == 0 
+    b otherwise
  *| sel |  a  |  b  | out |
  *|  0  |  0  |  0  |	 0  |
  *|  0  |  0  |  1  |	 0  |
