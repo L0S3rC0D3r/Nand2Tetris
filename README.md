@@ -31,7 +31,7 @@ Module 2: Boolean Arithmetic and the ALU Roadmap
 
  Using the chipset that we've built in the previous module, we will now proceed to build a family of adders -- chips designed to add numbers. We will then take a big step forward and build an Arithmetic Logic Unit. The ALU, which is designed to perform a whole set of arithmetic and logical operations, is the computer's calculating brain. Later in the course we will use this ALU as the centerpiece chip from which we will build the computer's Central Processing Unit, or CPU. Since all these chips operate on binary numbers (0's and 1's), we will start this module with a general overview of binary arithmetic, and only then delve into building the ALU.
  
- Important notes: How a simple abstracion of an ALU is evaluated with subfunctions.
+ Important notes: 
 ```
 /**
  * Computes the sum of three bits.
@@ -60,7 +60,10 @@ Module 2: Boolean Arithmetic and the ALU Roadmap
                           Xor(a=b, b=c, out= x2'x3 + x2*x3')  And(a=b. b=c, out=carryOfbc)
 */
 ```
-![image](https://user-images.githubusercontent.com/36864288/197653284-1047a268-782d-4c99-9542-4c61a2dada8a.png)
+Images: (1) How a simple abstracion of an ALU is evaluated with subfunctions. (2) quick overview
 
- ![image](https://user-images.githubusercontent.com/36864288/197629944-31dd09c3-59df-4fa0-af44-35489f165ea1.png)
+![image](https://user-images.githubusercontent.com/36864288/197653284-1047a268-782d-4c99-9542-4c61a2dada8a.png)
+(1)
+![image](https://user-images.githubusercontent.com/36864288/197629944-31dd09c3-59df-4fa0-af44-35489f165ea1.png)
+(2)
 
