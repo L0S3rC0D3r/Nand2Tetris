@@ -33,7 +33,7 @@ sum = a'(b'*c + b*c') + a
      c  And  b  Or  a And HalfAdder(a=b, b=c, sum=sumOfbc, carry=carryOfbc)
                           Xor(a=b, b=c, out= x2'x3 + x2*x3')  And(a=b. b=c, out=carryOfbc)
 carry = c And b   Or  a and Xor(b, c,  )
-        carryOfcb
+        carryOfcb  Or carryOfabc
 carry = b*c + a(b'*c + b*c')
 */
 ```
