@@ -72,10 +72,11 @@ Module 2: Boolean Arithmetic and the ALU Roadmap
                           Xor(a=b, b=c, out= x2'x3 + x2*x3')  And(a=b. b=c, out=carryOfbc)
 */
 ```
-Images: (1) How a simple abstracion of an ALU is evaluated with subfunctions. (2) quick overview
+Images: (1) How a simple abstracion of an ALU is evaluated with subfunctions. (2) quick overview, (3) Truth table
 
 ![image](https://user-images.githubusercontent.com/36864288/197653284-1047a268-782d-4c99-9542-4c61a2dada8a.png)
 (1)
 ![image](https://user-images.githubusercontent.com/36864288/197629944-31dd09c3-59df-4fa0-af44-35489f165ea1.png)
 (2)
-
+![image](https://user-images.githubusercontent.com/36864288/198144741-430ca0ad-5750-4e70-83b7-b2398dfbf896.png)
+(3)
