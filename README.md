@@ -7,22 +7,34 @@
  
  IMPORTANT NOTES from Module 1: In order to represent a Truth table to a binary function. We could use, values in which our function is equal to 1, by appendixing expresions between each other with an and for every value 1 on our truth table output (out). In the case that the value of the expression in the variables (a, b or sel) table is zero, then the expresions are negated, this expressions then must be appended each other with an and operation for every variable, and for every value in out, should be joined  with an or operation. Just as shown in here:
  ```
- /*Multiplexor:
-    out = a if sel == 0 
-    b otherwise
-  | sel |  a  |  b  | out |
-  |  0  |  0  |  0  |	 0  |
-  |  0  |  0  |  1  |	 0  |
-  |  0  |  1  |  0  |	 1  |
-  |  0  |  1  |  1  |	 1  |
-  |  1  |  0  |  0  |	 0  |
-  |  1  |  0  |  1  |	 1  |
-  |  1  |  1  |  0  |	 0  |
-  |  1  |  1  |  1  |	 1  |
-   (x1')(x2)x3' + (x1')(x2)(x3) + (x1)(x2')(x3) + (x1)(x2)(x3)
-   (x1')(x2)(x3+x3') + (x1)(x3)(x2+x2')
-   (x1')(x2) + (x1)(x3)
-   (sel')(a) + (sel)(b)
+ /* Computes the sum of three bits.
+ |  a  |  b  |  c  |   sum   |  carry  |
+ |  0  |  0  |  0  |    0    |    0    |
+ |  0  |  0  |  1  |    1    |    0    |
+ |  0  |  1  |  0  |    1    |    0    |
+ |  0  |  1  |  1  |    0    |    1    |
+ |  1  |  0  |  0  |    1    |    0    |
+ |  1  |  0  |  1  |    0    |    1    |
+ |  1  |  1  |  0  |    0    |    1    |
+ |  1  |  1  |  1  |    1    |    1    |
+
+    x1    x2    x3      y1       y2
+
+ y1 = (x1')(x2')(x3) + (x1')(x2)(x3') + (x1)(x2')(x3') + (x1)(x2)(x3)
+ y1 =  (x1')(x2'*x3 + x2x3') + (x1)(x2'*x3'+x2*x3)
+ INVERSE BOOLEAN LAW:  A + A' = 1
+ y1= (x1')(xor(b, c)) + (x1)(1)
+ y1= (x1')(x2'*x3 + x2x3') + x1
+sum = a'(b'*c + b*c') + a
+
+ y2 = (x1')(x2)(x3) + (x1)(x2')(x3) + (x1)(x2)(x3') + (x1)(x2)(x3)
+ y2 = (x2*x3)(x1 + x1') + x1(x2'*x3 + x2*x3')
+ y2 = (x2*x3)(1) + x1(x2'x3 + x2*x3')
+     c  And  b  Or  a And HalfAdder(a=b, b=c, sum=sumOfbc, carry=carryOfbc)
+                          Xor(a=b, b=c, out= x2'x3 + x2*x3')  And(a=b. b=c, out=carryOfbc)
+carry = c And b   Or  a and Xor(b, c,  )
+        carryOfcb
+carry = b*c + a(b'*c + b*c')
 */
 ```
 This same principle can be done in therms of zero values, but, they must be sum up with or operations and all functions must be appended with an and operation instead of appending each variable with and or operation. This method is not tested for now, however.
