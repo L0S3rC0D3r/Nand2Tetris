@@ -94,4 +94,7 @@ Literally, hands down to the the most important function of all boolean function
    Not16(in=zyOut, out=notnyOut);                 // (5) if (ny == 1) set y = !y       // bitwise not
    Mux16(a=zyOut, b=notnyOut, sel=ny, out=nyOut); // (6)
 
-Its REALLY INTERESTING, how a computer makes calculations before the task at hand... This makes the process of simulation and abstract thought harder to implement? What does it means?
+Its REALLY INTERESTING, how a computer makes calculations before the task at hand... This makes the process of simulation and abstract thought harder to implement? What does it means? And what did just happend in here!!:
+```
+Mux16(a=outF, b=notoutF, sel=no, out=out, out[0..7]= tryhard1, out[8..15]=tryhard2, out[15] = ng);     // WHAT THE H-A-CK (11) if (out < 0) set ng = 1
+```
