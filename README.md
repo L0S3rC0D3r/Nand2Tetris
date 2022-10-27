@@ -98,3 +98,8 @@ Its REALLY INTERESTING, how a computer makes calculations before the task at han
 ```
 Mux16(a=outF, b=notoutF, sel=no, out=out, out[0..7]= tryhard1, out[8..15]=tryhard2, out[15] = ng);     // WHAT THE H-A-CK (11) if (out < 0) set ng = 1
 ```
+
+
+Module 3: Memory Roadmap
+
+Having built the computer's ALU, this module we turn to building the computer's main memory unit, also known as Random Access Memory, or RAM. This will be done gradually, going bottom-up from elementary flip-flop gates to one-bit registers to n-bit registers to a family of RAM chips. Unlike the computer's processing chips, which are based on combinational logic, the computer's memory logic requires a clock-based sequential logic. We will start with an overview of this theoretical background, and then move on to build our memory chipset.
