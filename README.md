@@ -82,7 +82,7 @@ Images: (1) How a simple abstracion of an ALU is evaluated with subfunctions. (2
 (3)
 
 
-Literally, hands down to the the most important function of all boolean functions: Multiplexing. It involves data, and can be intertwined for desition making in programming:
+Literally, hands down to the the most important function of all boolean functions: Multiplexing. It involves data, and can be intertwined for decision making in programming:
 ```
    Mux16(a=x, b=false, sel=zx, out=zxOut);        // (1) if (zx == 1) set x = 0        // 16-bit constant
 
